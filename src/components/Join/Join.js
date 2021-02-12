@@ -24,7 +24,7 @@ const onRoomchange = (event) =>  {
                  <input placeholder='join' className="joinInput" type="text" onChange={onNamechange} />
              </div>
              <div>
-             <input placeholder='Room' className="joinInput mt-20" type="text" onChange={onRoomchange} />
+             <input placeholder='Room password' className="joinInput mt-20" type="text" onChange={onRoomchange} />
              </div>
               <Link onClick={event => (!name || !room) ? event.preventDefault() : null}  to={`/chat?name=${name}&room=${room}`}>
               <button className="button mt-20" type="submit">Sign in</button>
