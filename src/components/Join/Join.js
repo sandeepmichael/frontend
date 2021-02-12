@@ -19,9 +19,9 @@ const onRoomchange = (event) =>  {
     return (
         <div className="joinOuterContainer">
             <div className="joinInnerContainer">
-                <h1 className="heading">Join</h1>
+                <h1 className="heading">Join To ChatRoom</h1>
              <div>
-                 <input placeholder='join' className="joinInput" type="text" onChange={onNamechange} />
+                 <input placeholder='join with username' className="joinInput" type="text" onChange={onNamechange} />
              </div>
              <div>
              <input placeholder='Room password' className="joinInput mt-20" type="text" onChange={onRoomchange} />
