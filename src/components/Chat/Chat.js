@@ -31,11 +31,13 @@ socket = io.connect('https://hnew-app.herokuapp.com/'
 ,connectionOptions);
     setName(name)
     setRoom(room)
-    
+// conecting to server.js
     socket.emit('join', {name, room}, () => {
 
     })
+    //
 
+    // disconnecting event
     return () => {
     socket.emit('disconnect');
 
@@ -43,10 +45,12 @@ socket = io.connect('https://hnew-app.herokuapp.com/'
 
     socket.off();
     }
+    //.....
     
 },[ connectionOptions, location.search]);
 
 useEffect(() => {
+// this event coming from server side
     socket.on('message', (message)=> {
         setMessages([...messages, message])
 
