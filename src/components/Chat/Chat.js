@@ -27,7 +27,7 @@ const Chat = ({location}) => {
 useEffect(() => {
     const {name, room} = queryString.parse(location.search)
 
-socket = io.connect('https://hnew-app.herokuapp.com/'
+socket = io.connect('https://vnew-app.herokuapp.com/'
 ,connectionOptions);
     setName(name)
     setRoom(room)
@@ -57,6 +57,7 @@ useEffect(() => {
     }, [messages])
 })
 
+
 // function for sending messages...
 const sendMessage = event => {
     event.preventDefault();
@@ -69,7 +70,9 @@ const sendMessage = event => {
    
 }
 }
-console.log(message, messages)
+
+//console.log(message, messages)
+
 
 
     return (
@@ -77,7 +80,7 @@ console.log(message, messages)
             <div className = "container">
                 <InfoBar name={name} />
                 <Messages messages={messages} name={name} />
-            <Input message={message} setMessage={setMessage} sendMessage={sendMessage}
+            <Input message={message} setMessage={setMessage} sendMessage={sendMessage} 
             />
             </div>
         </div>
