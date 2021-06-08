@@ -27,7 +27,7 @@ const Chat = ({location}) => {
 useEffect(() => {
     const {name, room} = queryString.parse(location.search)
 
-socket = io.connect('https://vnew-app.herokuapp.com/'
+socket = io.connect('https://hnew-app.herokuapp.com/'
 ,connectionOptions);
     setName(name)
     setRoom(room)
